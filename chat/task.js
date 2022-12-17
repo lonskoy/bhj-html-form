@@ -22,6 +22,8 @@ function renderChatArea(mess) {        //Формирование окна ча�
     setTimeout(() => {
         chatArea.innerHTML += '<div class="message"><div class="message__time">' + tempTime + '</div><div class="message__text">' + botMessage[index] + '</div></div>';
     }, 1000); 
+    let messageBox = document.querySelector('message');
+    messageBox.scrollIntoView();
 }
 
 function sendMessage() {                           //Отправка сообщений пользователя в чат и проверка
@@ -38,10 +40,11 @@ widgetSide.addEventListener('click', () => {   //Клик на виджете с
         count += 1;
         console.log(count);
         if (count === 30) {
+            let botBox = 
             chatArea.innerHTML += '<div class="message"><div class="message__time">' + tempTime + '</div><div class="message__text">Ты там уснул?</div></div>';
             count = 0;
         }
-        this.scrollTo(0, document.body.scrollHeight);  //?????
+        
     }, 1000);
 });
 

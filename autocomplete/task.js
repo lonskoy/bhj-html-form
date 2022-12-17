@@ -81,3 +81,5 @@ class Autocomplete {
 
 
 new Autocomplete( document.querySelector( '.autocomplete' ));
+
+document.getElementsByTagName
